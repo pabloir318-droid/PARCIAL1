@@ -1,23 +1,23 @@
  public class ComplejidadTemporal {
-    // O(1) - Tiempo constante
+    
     public static int accesoConstante(int[] array) {
-        return array[0]; // Siempre toma el mismo tiempo
+        return array[0];
     }
-    // O(n) - Tiempo lineal
+    
     public static int sumaLineal(int[] array) {
         int suma = 0;
         for (int i = 0; i < array.length; i++) {
-            suma += array[i]; // Recorre todo el array una vez
+            suma += array[i];
         }
         return suma;
     }
-    // O(n²) - Tiempo cuadrático
+    
     public static void bubbleSort(int[] array) {
         int n = array.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
-                    // Intercambiar elementos
+                    
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
@@ -25,7 +25,7 @@
             }
         }
     }
-    // O(log n) - Búsqueda binaria
+    
     public static int busquedaBinaria(int[] array, int objetivo) {
         int izquierda = 0;
         int derecha = array.length - 1;
@@ -42,7 +42,7 @@
         }
         return -1;
     }
-    // O(2ⁿ) - Fibonacci recursivo (ineficiente)
+    
     public static int fibonacciExponencial(int n) {
         if (n <= 1) {
             return n;
